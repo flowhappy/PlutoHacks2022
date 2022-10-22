@@ -53,7 +53,7 @@ export default {
 <p><strong>It will teach you how to use the website.</strong> </p>
 <p><strong>At present, the content of this site is relatively simple, but with the continuous development of this site, the content and types will become more and more abundant.</strong> </p>
 <h3 id='on-the-left-side-of-your-screen-is-the-title-of-the-article-click-on-what-you-want-to-know-about-it'>On the left side of your screen is the title of the article, click on what you want to know about it!</h3>
-<pre><code class='language-c' lang='c'>int i =1;
+<pre><code class='language-c' lang='c'>Hope you can get what you are looking for!
 </code></pre>
 </body>
 </html>`
