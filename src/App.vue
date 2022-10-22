@@ -1,28 +1,50 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <content-page :class="{animate__animated:true, animate__fadeIn:true}" v-if="isFade&&noEdit" :welcomeFade="welcomeFade"/>
+    <compile-push v-if="isFade&&!noEdit" :startEdit="startEdit" :welcomeFade="welcomeFade"/>
+    <welcome-stu-hub v-show="!isFade" :startEdit="startEdit" :noEdit="noEdit" :isFade="isFade" :welcomeFade="welcomeFade"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import 'animate.css';
+import WelcomeStuHub from "@/components/WelcomeStuHub";
+import ContentPage from "@/components/ContentPage";
+import CompilePush from "@/components/CompilePush";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    WelcomeStuHub,
+    ContentPage,
+    CompilePush
+  },
+  data(){
+    return{
+      isFade:false,
+      noEdit:true,
+    }
+  },
+  methods:{
+    welcomeFade(code){
+      this.isFade=code
+    },
+    startEdit(code){
+      this.noEdit=code
+    }
   }
+
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import "github-markdown-css";
+.el-dialog{
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 20px;
+}
+body{
+  background-color: #FFECE9;
+  transition: 300ms !important;
 }
 </style>

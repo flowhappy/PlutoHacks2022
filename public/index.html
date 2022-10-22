@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<noscript>
+  <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+</noscript>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+</body>
+<style>
+  #app{
+    height: 100vh;
+  }
+  body{
+    transition: 300ms !important;
+    margin: 0;
+    padding: 0;
+  }
+  :root {
+    --color-background: #0E1117;
+    --white-color-background: #FFFFFF;
+    color-scheme: light dark;
+  }
+  /* 监听操作系统主题模式 */
+  @media (prefers-color-scheme: dark) {
+    body,.el-menu,.el-drawer,#md-area{
+      background-color: var(--color-background);
+      color: #C8D1D9;
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    body,.el-menu,.el-radio-button {
+      background-color: var(--white-color-background);
+    }
+  }
+</style>
 </html>
