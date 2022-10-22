@@ -8,6 +8,11 @@ npm install
 ```
 npm run serve
 ```
+```
+The files in the backend folder are all back-end files, just for demonstration, and are not directly related to this npm project.
+They used for building API interfaces.
+
+```
 
 ## I sincerely hope that what I have learned can help others and have a positive impact.
 There are many learning resource websites now, but most of the content is outdated and messy, which brings a lot of inconvenience to people's reading. Some websites load advertisements, confusing those who are not familiar with the Internet and older people. At the same time, some excellent resource websites need to buy corresponding services to access them. There are also some resource websites, although open source, the content is simple.
